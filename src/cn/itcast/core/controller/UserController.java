@@ -3,7 +3,6 @@ package cn.itcast.core.controller;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +25,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/addUser")
-	public String addUser(User user,HttpServletRequest request) {
+	public String addUser(User user) {
 		userService.addUser(user);
 		return "forward:findAllUser.htm";
 	}
